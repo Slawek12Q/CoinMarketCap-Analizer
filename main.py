@@ -1,3 +1,5 @@
+import time
+
 import requests
 import bs4
 from enum import Enum
@@ -13,24 +15,31 @@ class URLs(Enum):
 
 listOfUrls = set(URLs)
 
-for i in listOfUrls:
+startTime = time.time()
 
-    res = requests.get(i.value)
+for a in range(5):
 
-    beautifulSoapElement = bs4.BeautifulSoup(res.text, features="html5lib")
+    for i in listOfUrls:
 
-    element_negative = beautifulSoapElement.select('.negative_change')
-    element_positive = beautifulSoapElement.select('.positive_change')
+        res = requests.get(i.value)
 
-    if len(element_negative) > 0:
-        different = element_negative[0].getText()[2:len(element_negative[0].getText())-3]
-        different = float(different)
-        print(i.name, different)
+        beautifulSoapElement = bs4.BeautifulSoup(res.text, features="html5lib")
 
-    else:
-        different = element_positive[0].getText()[2:len(element_positive[0].getText())-3]
-        different = float(different)
-        print(i.name, different)
+        element_negative = beautifulSoapElement.select('.negative_change')
+        element_positive = beautifulSoapElement.select('.positive_change')
+
+        if len(element_negative) > 0:
+            different = element_negative[0].getText()[2:len(element_negative[0].getText())-3]
+            different = float(different)
+            print(i.name, different)
+
+        else:
+            different = element_positive[0].getText()[2:len(element_positive[0].getText())-3]
+            different = float(different)
+            print(i.name, different)
 
 
 
+stopTime = time.time()
+
+print(stopTime - startTime)
