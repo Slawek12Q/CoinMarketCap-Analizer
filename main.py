@@ -22,6 +22,8 @@ message = """Subject:Attention It's time to sell or buy  \n"""
 
 startTime = time.time()
 
+someChages = False
+
 for a in range(1):
 
     for i in listOfUrls:
@@ -46,22 +48,34 @@ for a in range(1):
 
 
         if -5 >= different or different >= 5:
-            smtpObj = smtplib.SMTP_SSL('poczta.interia.pl', 465 )
-            #send hello to our server
-            smtpObj.ehlo()
-            #encrypt the connection
-            #smtpObj.starttls()  -- disable because my connection is already encrypt
 
-            message += f"""\nYour criptocurent which you posses: {i.name}
-                        change your valuable abut: {different}% """
+            someChages = True
 
-            smtpObj.login(myEmail, password)
 
-            smtpObj.sendmail(myEmail, subscriberEmail,message)
 
-            {}
+            message += f"""\nYour coin which you posses: {i.name}
+                        change yourself price about: {different}% \n\n"""
 
-            smtpObj.quit()
+
+
+
+if someChages:
+    smtpObj = smtplib.SMTP_SSL('poczta.interia.pl', 465)
+    # send hello to our server
+    smtpObj.ehlo()
+    # encrypt the connection
+    # smtpObj.starttls()  -- disable because my connection is already encrypt
+
+    smtpObj.login(myEmail, password)
+
+    smtpObj.sendmail(myEmail, subscriberEmail, message)
+
+    {}
+
+    smtpObj.quit()
+
+    someChages = False
+
 
 
 stopTime = time.time()
