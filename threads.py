@@ -47,7 +47,7 @@ for a in range(5):
         #checUrl(i)
         print(i.name)
         urlThread = threading.Thread(target=checUrl, args=(i,))
-        urlThreads.append(urlThread)
+       # urlThreads.append(urlThread)
         urlThread.start()
 
 
