@@ -11,8 +11,8 @@ class URLs(Enum):
     LISK = "https://coinmarketcap.com/currencies/lisk/"
     DOGECOIN = "https://coinmarketcap.com/currencies/dogecoin/"
     TRON = "https://coinmarketcap.com/currencies/tron/"
-    Steem = "https://coinmarketcap.com/currencies/steem/"
-
+    STEEM = "https://coinmarketcap.com/currencies/steem/"
+    ETHEREUM="https://coinmarketcap.com/currencies/ethereum/"
 
 listOfUrls = set(URLs)
 
@@ -33,19 +33,11 @@ for a in range(1):
         different = 0
         beautifulSoapElement = bs4.BeautifulSoup(res.text, features="html5lib")
 
-        element_negative = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2)')
-        element_positive = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2)')
+        changes = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2)')
 
-        if len(element_negative) > 0:
-            different = element_negative[0].getText()[2:len(element_negative[0].getText())-3]
-            different = float(different)
-            print(i.name, different)
-
-        else:
-            different = element_positive[0].getText()[2:len(element_positive[0].getText())-3]
-            different = float(different)
-            print(i.name, different)
-
+        different = changes[0].getText()[2:len(changes[0].getText())-3]
+        different = float(different)
+        print(i.name, different)
 
 
         if -5 >= different or different >= 5:
