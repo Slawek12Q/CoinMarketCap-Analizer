@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main.py" line="18" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5824938-78ba-42a3-92ca-001ceeef7106" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="b5824938-78ba-42a3-92ca-001ceeef7106" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -37,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/threads.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="21" column="158" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="158" />
+              <caret line="21" column="158" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="158" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -263,12 +258,12 @@
       <workItem from="1543419040103" duration="2074000" />
       <workItem from="1543786364999" duration="14786000" />
       <workItem from="1544740624624" duration="126000" />
-      <workItem from="1550448156098" duration="3041000" />
+      <workItem from="1550448156098" duration="4685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20296000" />
+    <option name="totallyTimeSpent" value="21940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -335,7 +330,7 @@
     <entry file="file://$PROJECT_DIR$/threads.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="21" column="158" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="158" />
+          <caret line="21" column="158" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="158" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -344,11 +339,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
         </state>
       </provider>
     </entry>
