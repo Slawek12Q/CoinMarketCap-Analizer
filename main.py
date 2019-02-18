@@ -69,7 +69,6 @@ if someChages:
     smtpObj.login(myEmail, password)
 
     smtpObj.sendmail(myEmail, subscriberEmail, message)
-
     {}
 
     smtpObj.quit()

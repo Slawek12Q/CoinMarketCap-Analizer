@@ -18,8 +18,8 @@ def checUrl (url):
 
     beautifulSoapElement = bs4.BeautifulSoup(res.text, features="html5lib")
 
-    element_negative = beautifulSoapElement.select('.negative_change')
-    element_positive = beautifulSoapElement.select('.positive_change')
+    element_negative = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2) > span')
+    element_positive = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2) > span')
 
     if len(element_negative) > 0:
         different = element_negative[0].getText()[2:len(element_negative[0].getText()) - 3]
