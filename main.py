@@ -16,16 +16,19 @@ class URLs(Enum):
 
 listOfUrls = set(URLs)
 
-# myEmail = input("enter your email: ")
-# password = input("enter your password: ")
-# subscriberEmail = input("enter subscriber email: ")
-# message = """Subject:Attention It's time to sell or buy  \n"""
+myDataFile = open('C:\\Users\\Lenovo\\Desktop\\myData.txt')
+
+myEmail = myDataFile.readline().strip()
+myPassword = myDataFile.readline().strip()
+subscriberEmail = myDataFile.readline().strip()
+
+message = """Subject:Attention It's time to sell or buy  \n"""
 
 startTime = time.time()
 
 someChages = False
 
-# for a in range(1):
+
 while True:
 
     for i in listOfUrls:
@@ -41,34 +44,35 @@ while True:
         print(i.name, different)
 
 
-        if -5 >= different or different >= 5:
+        if -5 >= different or different >= 2:
 
             someChages = True
+            message += f"""\nYour coin which you posses: {i.name}
+                           #             change yourself price about: {different}% \n\n"""
 
-    print("break\n\n\n")
+    print("\n\n\n")
+
+
+    if someChages:
+        break
+
     time.sleep(60)
 
-            # message += f"""\nYour coin which you posses: {i.name}
-            #             #             change yourself price about: {different}% \n\n"""
+smtpObj = smtplib.SMTP_SSL('poczta.interia.pl', 465)
+
+# send hello to our server
+smtpObj.ehlo()
+# encrypt the connection
+#smtpObj.starttls()  #-- disable because my connection is already encrypt
+
+smtpObj.login(myEmail, myPassword)
+
+smtpObj.sendmail(myEmail, subscriberEmail, message)
+{}
+
+smtpObj.quit()
 
 
-
-
-# if someChages:
-#     smtpObj = smtplib.SMTP_SSL('poczta.interia.pl', 465)
-#     # send hello to our server
-#     smtpObj.ehlo()
-#     # encrypt the connection
-#     # smtpObj.starttls()  -- disable because my connection is already encrypt
-#
-#     smtpObj.login(myEmail, password)
-#
-#     smtpObj.sendmail(myEmail, subscriberEmail, message)
-#     {}
-#
-#     smtpObj.quit()
-#
-#     someChages = False
 
 
 
