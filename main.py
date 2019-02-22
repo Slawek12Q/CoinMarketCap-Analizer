@@ -25,7 +25,8 @@ startTime = time.time()
 
 someChages = False
 
-for a in range(1):
+# for a in range(1):
+while True:
 
     for i in listOfUrls:
 
@@ -35,7 +36,7 @@ for a in range(1):
 
         changes = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2)')
 
-        different = changes[0].getText()[2:len(changes[0].getText())-3]
+        different = changes[0].getText()[2:len(changes[0].getText())-4]
         different = float(different)
         print(i.name, different)
 
@@ -44,7 +45,8 @@ for a in range(1):
 
             someChages = True
 
-
+    print("break\n\n\n")
+    time.sleep(60)
 
             # message += f"""\nYour coin which you posses: {i.name}
             #             #             change yourself price about: {different}% \n\n"""
