@@ -35,7 +35,7 @@ while True:
 
         res = requests.get(i.value)
         different = 0
-        beautifulSoapElement = bs4.BeautifulSoup(res.text, features="html5lib")
+        beautifulSoapElement = bs4.BeautifulSoup(res.text,features="html.parser")
 
         changes = beautifulSoapElement.select('html > body > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > span:nth-of-type(2)')
 
@@ -58,19 +58,20 @@ while True:
 
     time.sleep(60)
 
-smtpObj = smtplib.SMTP_SSL('poczta.interia.pl', 465)
+smtpObj = smtplib.SMTP_SSL("poczta.interia.pl", 465)
 
 # send hello to our server
 smtpObj.ehlo()
 # encrypt the connection
-#smtpObj.starttls()  #-- disable because my connection is already encrypt
+# smtpObj.starttls()  #-- disable because my connection is already encrypt
 
 smtpObj.login(myEmail, myPassword)
+
 
 smtpObj.sendmail(myEmail, subscriberEmail, message)
 {}
 
-smtpObj.quit()
+smtpObj.close()
 
 
 
