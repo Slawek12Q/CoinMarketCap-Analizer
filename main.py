@@ -2,17 +2,7 @@ import time
 import smtplib
 import requests
 import bs4
-from enum import Enum
-
-class URLs(Enum):
-    BITCOIN = "https://coinmarketcap.com/currencies/bitcoin/"
-    RIPPLE = "https://coinmarketcap.com/currencies/ripple/"
-    LITECOIN = "https://coinmarketcap.com/currencies/litecoin/"
-    LISK = "https://coinmarketcap.com/currencies/lisk/"
-    DOGECOIN = "https://coinmarketcap.com/currencies/dogecoin/"
-    TRON = "https://coinmarketcap.com/currencies/tron/"
-    STEEM = "https://coinmarketcap.com/currencies/steem/"
-    ETHEREUM="https://coinmarketcap.com/currencies/ethereum/"
+from url import URLs
 
 listOfUrls = set(URLs)
 
@@ -48,7 +38,7 @@ while True:
 
             someChages = True
             message += f"""\nYour coin which you posses: {i.name}
-                           #change yourself price about: {different}% \n\n"""
+                           #             change yourself price about: {different}% \n\n"""
 
     print("\n\n\n")
 

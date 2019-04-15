@@ -6,10 +6,9 @@ class URLs(Enum):
     LITECOIN = "https://coinmarketcap.com/currencies/litecoin/"
     LISK = "https://coinmarketcap.com/currencies/lisk/"
     DOGECOIN = "https://coinmarketcap.com/currencies/dogecoin/"
+    TRON = "https://coinmarketcap.com/currencies/tron/"
+    STEEM = "https://coinmarketcap.com/currencies/steem/"
+    ETHEREUM="https://coinmarketcap.com/currencies/ethereum/"
 
 
 
-listOfUrls = set(URLs)
-
-for i in listOfUrls:
-    print(i.value)
