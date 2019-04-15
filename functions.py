@@ -13,6 +13,8 @@ myEmail = myDataFile.readline().strip()
 myPassword = myDataFile.readline().strip()
 subscriberEmail = myDataFile.readline().strip()
 changePrice = int(myDataFile.readline().strip())
+breakTime = int(myDataFile.readline().strip())
+
 
 def check_the_market():
     message = """Subject:Attention It's time to sell or buy  \n"""
@@ -43,7 +45,7 @@ def check_the_market():
         if someChages:
             return message
 
-        time.sleep(60)
+        time.sleep(breakTime)
 
 
 def send_email(message):
