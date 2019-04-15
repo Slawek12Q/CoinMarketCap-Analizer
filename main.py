@@ -44,11 +44,11 @@ while True:
         print(i.name, different)
 
 
-        if -5 >= different or different >= 2:
+        if -1 >= different or different >= 1:
 
             someChages = True
             message += f"""\nYour coin which you posses: {i.name}
-                           #             change yourself price about: {different}% \n\n"""
+                           #change yourself price about: {different}% \n\n"""
 
     print("\n\n\n")
 
@@ -58,23 +58,13 @@ while True:
 
     time.sleep(60)
 
-smtpObj = smtplib.SMTP_SSL("poczta.interia.pl", 465)
-
-# send hello to our server
+smtpObj = smtplib.SMTP('smtp.gmail.com:587')
 smtpObj.ehlo()
-# encrypt the connection
-# smtpObj.starttls()  #-- disable because my connection is already encrypt
-
+smtpObj.starttls()
 smtpObj.login(myEmail, myPassword)
-
-
 smtpObj.sendmail(myEmail, subscriberEmail, message)
 {}
-
 smtpObj.close()
-
-
-
 
 
 stopTime = time.time()
