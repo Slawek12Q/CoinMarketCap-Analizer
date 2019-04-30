@@ -33,4 +33,4 @@ Run the program, it will work until you send an e-mail.
 
 ---Future plans 
 
-Creation of a graphical interface
+Creation of a graphical interface.
