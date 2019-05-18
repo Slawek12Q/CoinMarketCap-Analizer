@@ -31,6 +31,6 @@ I've included some examples of cryptovalutes in the file url.py. If you want to 
 
 Run the program, it will work until you send an e-mail.
 
----Future plans 
+--Future plans 
 
 Creation of a graphical interface.
