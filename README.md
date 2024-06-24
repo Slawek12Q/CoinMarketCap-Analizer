@@ -27,7 +27,7 @@ In this file, place the following data in separate information:
 
 -time interval between price change checks
 
-I've included some examples of cryptovalutes in the file url.py. If you want to add any cryptocurrency, go to the website https://coinmarketcap.com/, selet cryto which intereting you, click and copy link and paste to file url.py.
+I've included some examples of cryptovalutes in the file url.py. If you want to add any cryptocurrency, go to the website https://coinmarketcap.com/, selet cryto which interesting you, click and copy link and paste to file url.py.
 
 Run the program, it will work until you send an e-mail.
 
